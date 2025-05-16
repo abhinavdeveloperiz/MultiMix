@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+
+
+<section class="hero">
+    <div class="container">
+        <h1>Our Solar Services</h1>
+        <p>Harness the power of the sun with our comprehensive solar solutions tailored to meet your unique energy
+            needs. Our expert team provides sustainable, cost-effective solar installations for residential and
+            commercial properties.</p>
+    </div>
+</section>
+
+<section class="services">
+    <div class="container">
+        <h2 class="section-title">What We Offer</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M4,2H20A2,2 0 0,1 22,4V14A2,2 0 0,1 20,16H15.58L12,20.05L8.42,16H4A2,2 0 0,1 2,14V4A2,2 0 0,1 4,2M5.5,10.5H11V4.5H5.5V10.5M12.5,4.5V10.5H18.5V4.5H12.5M5.5,11.5V14H8.47L10.68,16.5H12L14.21,14H20V11.5H5.5Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Residential Solar Installation</h3>
+                    <p>Transform your home with custom solar panel installations designed to maximize energy production
+                        and reduce utility bills. We handle everything from design to installation and maintenance.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2M6,4V20H18V4H6M11,7H13V9H15V11H13V13H11V11H9V9H11V7M9,15H15V17H9V15Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Commercial Solar Solutions</h3>
+                    <p>Reduce operating costs and minimize your business's environmental impact with our scalable
+                        commercial solar systems. Custom designed for offices, warehouses, and industrial facilities.
+                    </p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M4,21V19H2V17H4V15H6V17H8V15H10V17H12V15H14V17H16V15H18V17H20V15H22V17H20V19H22V21H20V23H18V21H16V23H14V21H12V23H10V21H8V23H6V21H4M4,19H6V17H4V19M8,19H10V17H8V19M12,19H14V17H12V19M16,19H18V17H16V19M11,11H13V13H11V11M11,7H13V9H11V7M11,3H13V5H11V3M3,13H5V11H3V13M3,9H5V7H3V9M3,5H5V3H3V5M7,13H9V11H7V13M7,9H9V7H7V9M7,5H9V3H7V5Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Solar Battery Storage</h3>
+                    <p>Store excess solar energy with cutting-edge battery solutions to power your property during
+                        outages or peak usage times. Maximize your energy independence with our integrated storage
+                        options.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Solar Maintenance & Monitoring</h3>
+                    <p>Keep your solar investment performing optimally with our comprehensive maintenance plans and
+                        real-time monitoring services. We ensure your system operates at peak efficiency year-round.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M15,12H16.5V16.25L19.36,17.94L18.61,19.16L15,17V12M16,9C16.69,9 17.37,9.1 18,9.29V4.7L15,5.86V9.07C15.33,9 15.66,9 16,9M23,16A7,7 0 0,1 16,23C13,23 10.4,21.08 9.42,18.4L8,17.9L2.66,19.97L2.5,20A0.5,0.5 0 0,1 2,19.5V4.38C2,4.15 2.15,3.97 2.36,3.9L8,2L14,4.1L19.34,2.03L19.5,2A0.5,0.5 0 0,1 20,2.5V10.25C21.81,11.5 23,13.62 23,16M9,16C9,12.13 12.13,9 16,9C19.87,9 23,12.13 23,16C23,19.87 19.87,23 16,23C12.13,23 9,19.87 9,16M4,5.46V17.31L7,16.15V4.45L4,5.46Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Solar Consulting & Design</h3>
+                    <p>Our experts will assess your property, energy needs, and budget to design a customized solar
+                        solution that delivers optimal return on investment and energy efficiency.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-img">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
+                    </svg>
+                </div>
+                <div class="service-content">
+                    <h3>Solar Financing Options</h3>
+                    <p>Access flexible financing solutions including loans, leases, and power purchase agreements to
+                        make solar energy affordable. We'll help you navigate available incentives and rebates.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="process">
+    <div class="container">
+        <h2 class="section-title">Our Installation Process</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Consultation</h3>
+                <p>We assess your energy needs and property to create a custom solar plan.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Design</h3>
+                <p>Our engineers design your optimal solar system with cutting-edge technology.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Installation</h3>
+                <p>Our certified technicians install your system with minimal disruption.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Activation</h3>
+                <p>We handle permits, inspections, and utility connections to get you powered up.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="cta">
+    <div class="container">
+        <h2>Ready to Harness Solar Power?</h2>
+        <p>Contact us today for a free consultation and custom quote. Our solar experts will help you design the perfect
+            solar solution for your energy needs and budget.</p>
+        <a href="#" class="btn">Get Your Free Quote</a>
+    </div>
+</section>
+
+
+
+{% endblock %}

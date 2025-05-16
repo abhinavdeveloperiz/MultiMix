@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.btn {
+  background-color: #c0a56e;
+  color: #000000;
+  border: none; 
+  animation: shimmerMove 2s ease infinite;
+}
+
+.btn:hover{
+    background-color: #937943;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+}
+
+/* Section styling */
+.section-title {
+    margin-bottom: 2rem;
+    position: relative;
+    font-weight: 700;
+}
+
+/* Hero section styles */
+.hero-section {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: 3;
+    color: rgb(255, 255, 255);
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Cards section */
+.cards-section {
+    margin-top: -120px;
+    position: relative;
+    z-index: 4;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 200px;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* About section styling */
+.about-section {
+    background-color: #fff;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #c0a56e;
+}
+
+.feature-item {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter section */
+.counter-section {
+    background-color: #f8f9fa;
+}
+
+.counter-box {
+    padding: 2rem 1rem;
+}
+
+.counter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c0a56e;
+}
+
+/* Testimonials section */
+.testimonial-card {
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-style: italic;
+}
+
+/* Projects section */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    height: 100%;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+}
+
+/* CTA section */
+.cta-section {
+    background-color: #fff;
+}
+
+
+.cta-content {
+    background: linear-gradient(135deg, #6e78c0 0%, #e4c994 100%);
+    color: white;
+    background-size: 200% 200%;
+    animation: shimmerMove 2s ease infinite;
+    border-radius: 12px; /* optional, for a softer card look */
+    padding: 2rem; /* optional, for spacing */
+}
+
+/* Animation keyframes */
+@keyframes shimmerMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Partners section */
+.partner-logo {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+.partner-logo img {
+    max-height: 80px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.partner-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+    }
+    
+    .cards-section {
+        margin-top: -80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+    }
+    
+    .hero-text {
+        left: 5%;
+        max-width: 90%;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .cards-section {
+        margin-top: -60px;
+    }
+    
+    .project-card img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-section {
+        height: 60vh;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-text p {
+        font-size: 0.9rem;
+    }
+    
+    .cards-section {
+        margin-top: -40px;
+    }
+    
+    .counter {
+        font-size: 2rem;
+    }
+    
+    .cta-content {
+        padding: 2rem !important;
+    }
+}
