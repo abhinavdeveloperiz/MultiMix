@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     color: #333;
     line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
  
 
@@ -21,9 +22,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #586659;
+    background: linear-gradient(rgba(88, 102, 89, 0.3), rgba(0, 0, 0, 0.5)), url('../image/head.jpg') no-repeat center center/cover;
     color: white;
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
 }
 
@@ -219,8 +220,12 @@ body {
     .nav-links {
         display: none;
     }
+    
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
     }
 }

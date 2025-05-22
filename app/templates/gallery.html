@@ -1,0 +1,72 @@
+ {% extends 'base.html' %}
+ {% load static %}
+ {% block content %}
+ <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+
+ 
+<!-- Header Section with Image and Text Overlay -->
+    <div class="header">
+        <img class="header-image" src="{% static 'image/head.jpg' %}" alt="Gallery Header">
+        <div class="header-overlay">
+            <h1>Curated Collections</h1>
+            <p>Explore our carefully selected works showcasing beauty in its most natural form</p>
+        </div>
+    </div>
+    
+    <!-- Gallery Section -->
+    <div class="gallery-container">
+        <h2 class="gallery-title">Featured Gallery</h2>
+        <div class="gallery">
+            <!-- Gallery Items -->
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 1">
+                <div class="gallery-item-overlay">
+                    <h3>Natural Serenity</h3>
+                    <p>Peaceful landscapes capturing the essence of nature</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 2">
+                <div class="gallery-item-overlay">
+                    <h3>Urban Reflections</h3>
+                    <p>Modern architecture through an artistic lens</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 3">
+                <div class="gallery-item-overlay">
+                    <h3>Vintage Elegance</h3>
+                    <p>Timeless pieces from another era</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 4">
+                <div class="gallery-item-overlay">
+                    <h3>Abstract Vision</h3>
+                    <p>Contemporary expressions in vivid color</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 5">
+                <div class="gallery-item-overlay">
+                    <h3>Natural Harmony</h3>
+                    <p>Organic forms in perfect balance</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="{% static 'image/head.jpg' %}" alt="Gallery Image 6">
+                <div class="gallery-item-overlay">
+                    <h3>Coastal Dreams</h3>
+                    <p>Seaside inspirations and oceanic wonder</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ {% endblock %}

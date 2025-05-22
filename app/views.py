@@ -16,4 +16,4 @@ def Gallery_view(Request):
     return render(Request,'gallery.html')
 
 def Contact_view(Request):
-    return render(Request,'gallery.html')
+    return render(Request,'contact.html')

@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+
+
+<div class="header">
+    <img class="header-image" src="{% static 'image/head.jpg' %}" alt="Contact Header">
+    <div class="header-overlay">
+        <h1>Contact Us</h1>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="contact-container">
+    <!-- Contact Information -->
+    <div class="contact-info">
+        <h2>Get in Touch</h2>
+
+        <div class="info-item">
+            <div class="info-icon">
+                <i>📍</i>
+            </div>
+            <div class="info-text">
+                <h3>Our Location</h3>
+                <p>123 Gallery Street, Art District</p>
+                <p>New York, NY 10001</p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">
+                <i>📞</i>
+            </div>
+            <div class="info-text">
+                <h3>Phone Number</h3>
+                <p><a href="tel:+12125551234">(212) 555-1234</a></p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">
+                <i>✉️</i>
+            </div>
+            <div class="info-text">
+                <h3>Email Address</h3>
+                <p><a href="mailto:info@artgallery.com">info@artgallery.com</a></p>
+            </div>
+        </div>
+
+        <div class="info-item">
+            <div class="info-icon">
+                <i>⏰</i>
+            </div>
+            <div class="info-text">
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 10AM - 6PM</p>
+                <p>Saturday: 11AM - 5PM</p>
+                <p>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="#" class="social-icon">
+                <i>f</i>
+            </a>
+            <a href="#" class="social-icon">
+                <i>t</i>
+            </a>
+            <a href="#" class="social-icon">
+                <i>in</i>
+            </a>
+            <a href="#" class="social-icon">
+                <i>ig</i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" class="form-control" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Map Section -->
+<div class="container-fluid">
+    
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15767.496542101751!2d76.6057335527954!3d8.891292493907141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd9c81997a21%3A0x9a5017df65b6ef22!2sMultimix%20security%20system%20providers!5e0!3m2!1sen!2sin!4v1747649835082!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+    
+</div>
+
+
+{% endblock %}

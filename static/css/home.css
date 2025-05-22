@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-}
+
 
 .btn {
   background-color: #c0a56e;
@@ -119,7 +114,7 @@ img {
 
 /* About section styling */
 .about-section {
-    background-color: #fff;
+    background-color: #586659;
 }
 
 .feature-icon {
@@ -224,7 +219,7 @@ img {
 
 
 .cta-content {
-    background: linear-gradient(135deg, #6e78c0 0%, #e4c994 100%);
+    background: linear-gradient(135deg, #5542b4 0%, #62bd76 100%);
     color: white;
     background-size: 200% 200%;
     animation: shimmerMove 2s ease infinite;
@@ -240,9 +235,7 @@ img {
     50% {
         background-position: 100% 50%;
     }
-    100% {
-        background-position: 0% 50%;
-    }
+    
 }
 
 /* Partners section */
@@ -281,6 +274,7 @@ img {
 }
 
 @media screen and (max-width: 768px) {
+    
     .hero-section {
         height: 80vh;
     }
