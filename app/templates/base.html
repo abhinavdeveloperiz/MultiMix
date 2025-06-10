@@ -206,92 +206,79 @@
         }
 
         /* Footer styling */
+        /* Align left on mobile */
+        @media (max-width: 767.98px) {
+            .footer .row>div {
+                text-align: left !important;
+            }
+
+            .footer .social-icons {
+                justify-content: flex-start !important;
+            }
+        }
+
         .footer {
-            background: linear-gradient(135deg, var(--dark-color) 0%, #1a252f 100%);
-            color: white;
-            padding: 60px 0 30px;
+            background-color: #111;
+            color: #fff;
+            padding: 40px 0 20px;
         }
 
         .footer h5 {
-            font-weight: 600;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-            color: white;
-        }
-
-        .footer h5::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 3px;
-            background-color: var(--primary-color);
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .footer-links {
             list-style: none;
-            padding-left: 0;
-            margin-bottom: 30px;
+            padding: 0;
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: #ccc;
             text-decoration: none;
-            transition: var(--transition);
-            font-size: 0.95rem;
-            display: block;
+            transition: 0.3s;
         }
 
         .footer-links a:hover {
-            color: white;
-            padding-left: 5px;
+            color: #fff;
         }
 
-        .footer-links a i {
-            margin-right: 8px;
-            color: var(--primary-color);
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: 10px;
-            transition: var(--transition);
+            color: #fff;
+            font-size: 18px;
+            transition: color 0.3s;
         }
 
         .social-icons a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
+            color: #0d6efd;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 20px;
-            margin-top: 40px;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+            padding-top: 10px;
             text-align: center;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            color: #aaa;
         }
 
-        .footer-logo {
-            margin-bottom: 20px;
+        .footer-bottom a {
+            color: #aaa;
         }
 
-        .footer-logo img {
-            height: 40px;
-            margin-bottom: 15px;
+        .footer-bottom a:hover {
+            color: #fff;
         }
 
         /* Page section styling */
@@ -485,61 +472,83 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-dark text-white pt-5 pb-3">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                    <div class="footer-logo">
-                        <img src="{% static 'image/logo.png' %}" style="height: 150px;" alt="Logo" class="img-fluid">
-                    </div>
 
+                <!-- Logo + Social -->
+                <div class="col-lg-3 col-md-6 mb-4 text-start">
+                    <div class="footer-logo mb-3">
+                        <img src="{% static 'image/logo.png' %}" style="height: 120px;" alt="Logo" class="img-fluid">
+                    </div>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1gsYc9T48L/?mibextid=wwXIfr"><i
+                        <a href="https://www.facebook.com/share/1gsYc9T48L/?mibextid=wwXIfr" class="me-3 text-white"><i
                                 class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/multimixdistributors?igsh=aXRwd3BzM3lkMDUy&utm_source=qr"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://wa.me/918157033676"><i class="fab fa-whatsapp"></i></a>
-
+                        <a href="https://www.instagram.com/multimixdistributors?igsh=aXRwd3BzM3lkMDUy&utm_source=qr"
+                            class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/918157033676" class="text-white"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                    <h5>Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="{% url 'home' %}"><i class="fas fa-angle-right"></i> Home</a></li>
-                        <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i> About</a></li>
-                        <li><a href="{% url 'service' %}"><i class="fas fa-angle-right"></i> Services</a></li>
-                        <li><a href="{% url 'gallery' %}"><i class="fas fa-angle-right"></i> Gallery</a></li>
-                        <li><a href="{% url 'contact' %}"><i class="fas fa-angle-right"></i> Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Our Services</h5>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Residential Solar Solutions</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Commercial Solar Systems</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Industrial Solar Installations</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> School & Institutional Solar</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Solar Panel Maintenance</a></li>
-                    </ul>
 
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5>Contact Info</h5>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Decent junction, Kollam</a></li>
-                        <li><a href="tel:+918157033676"><i class="fas fa-phone-alt"></i>8157033676</a></li>
-                        <li><a href="mailto:Multimix2015kollam@gmail.com"><i class="fas fa-envelope"></i>
-                                Multimix2015kollam@gmail.com</a></li>
-                        <li><a href="#"><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</a></li>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 text-start">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="{% url 'home' %}" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Home</a></li>
+                        <li><a href="{% url 'about' %}" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>About</a></li>
+                        <li><a href="{% url 'service' %}" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Services</a></li>
+                        <li><a href="{% url 'gallery' %}" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Gallery</a></li>
+                        <li><a href="{% url 'contact' %}" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Contact</a></li>
                     </ul>
                 </div>
+
+                <!-- Our Services -->
+                <div class="col-lg-3 col-md-6 mb-4 text-start">
+                    <h5 class="mb-3">Our Services</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Residential Solar Solutions</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Commercial Solar Systems</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Industrial Solar Installations</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>School & Institutional Solar</a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i
+                                    class="fas fa-angle-right me-2"></i>Solar Panel Maintenance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 text-start">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Decent Junction, Kollam</li>
+                        <li><a href="tel:+918157033676" class="text-white text-decoration-none"><i
+                                    class="fas fa-phone-alt me-2"></i>8157033676</a></li>
+                        <li><a href="mailto:Multimix2015kollam@gmail.com" class="text-white text-decoration-none"><i
+                                    class="fas fa-envelope me-2"></i>Multimix2015kollam@gmail.com</a></li>
+                        <li><i class="fas fa-clock me-2"></i>Mon - Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="footer-bottom">
-                <p>Copyright © 2025 All rights reserved | Designed by <a class="company text-white text-decoration-none"
-                        href="https://inspirezesttechnologies.com/">InspireZest Technologies Pvt Ltd</a></p>
+
+            <!-- Bottom Note -->
+            <div class="text-center mt-4 pt-3 border-top border-secondary">
+                <p class="mb-0 small">Copyright © 2025 All rights reserved |
+                    Designed by <a class="company text-white text-decoration-none fw-bold"
+                        href="https://inspirezesttechnologies.com/" target="_blank">InspireZest Technologies Pvt Ltd</a>
+                </p>
             </div>
         </div>
     </footer>
+
 
     <!-- Fixed contact buttons -->
     <div class="contact-buttons">
