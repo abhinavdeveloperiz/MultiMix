@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Bootstrap CSS -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -78,7 +81,6 @@
             position: absolute;
             width: 0;
             height: 2px;
-            background-color: var(--primary-color);
             bottom: 0;
             left: 15px;
             transition: var(--transition);
@@ -89,10 +91,7 @@
             width: calc(100% - 30px);
         }
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary-color) !important;
-        }
+
 
         /* Custom navbar toggler */
         .navbar-toggler {
@@ -374,8 +373,67 @@
                 padding: 60px 0;
             }
         }
+
+        /* page loader  */
+        /* Page Loader Styles */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            /* or dark: #111 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .loader-wrapper {
+            text-align: center;
+        }
+
+        .loader-logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
     </style>
-    
+
 </head>
 
 <body>
@@ -412,12 +470,18 @@
             </div>
         </div>
     </nav>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-wrapper">
+            <img src="{% static 'image/logo.png' %}" alt="Logo" class="loader-logo">
+            <div class="spinner mx-auto d-flex justify-content-center"></div>
+        </div>
+    </div>
+
 
     <!-- Content area for child templates -->
     <main class="content">
-        {% block content %}
-        <!-- Page-specific content will go here -->
-        {% endblock %}
+        {% block content %} {% endblock %}
     </main>
 
     <!-- Footer -->
@@ -428,13 +492,14 @@
                     <div class="footer-logo">
                         <img src="{% static 'image/logo.png' %}" style="height: 150px;" alt="Logo" class="img-fluid">
                     </div>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
-                        ullamcorper mattis.</p>
+
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/share/1gsYc9T48L/?mibextid=wwXIfr"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/multimixdistributors?igsh=aXRwd3BzM3lkMDUy&utm_source=qr"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/918157033676"><i class="fab fa-whatsapp"></i></a>
+
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
@@ -450,20 +515,21 @@
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5>Our Services</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Service One</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Service Two</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Service Three</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Service Four</a></li>
-                        <li><a href="#"><i class="fas fa-angle-right"></i> Service Five</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Residential Solar Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Commercial Solar Systems</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Industrial Solar Installations</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> School & Institutional Solar</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Solar Panel Maintenance</a></li>
                     </ul>
+
                 </div>
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h5>Contact Info</h5>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Street Name, City, Country</a></li>
-                        <li><a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> +123 456 7890</a></li>
-                        <li><a href="mailto:info@yourcompany.com"><i class="fas fa-envelope"></i>
-                                info@yourcompany.com</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i>Decent junction, Kollam</a></li>
+                        <li><a href="tel:+918157033676"><i class="fas fa-phone-alt"></i>8157033676</a></li>
+                        <li><a href="mailto:Multimix2015kollam@gmail.com"><i class="fas fa-envelope"></i>
+                                Multimix2015kollam@gmail.com</a></li>
                         <li><a href="#"><i class="fas fa-clock"></i> Mon - Fri: 9:00 AM - 6:00 PM</a></li>
                     </ul>
                 </div>
@@ -477,15 +543,15 @@
 
     <!-- Fixed contact buttons -->
     <div class="contact-buttons">
-        <a href="tel:+1234567890" class="contact-btn call-btn">
+        <a href="tel:+918157033676" class="contact-btn call-btn">
             <i class="fas fa-phone-alt"></i>
         </a>
-        <a href="https://wa.me/1234567890" class="contact-btn whatsapp-btn">
+        <a href="https://wa.me/918157033676" class="contact-btn whatsapp-btn">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-   
+
     <script>
         // Navbar scroll effect
         const navbar = document.querySelector('.navbar');
@@ -508,6 +574,16 @@
             } else {
                 link.classList.remove('active');
             }
+        });
+
+        // page loader 
+
+        window.addEventListener('load', function () {
+            const loader = document.getElementById('page-loader');
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+            loader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => loader.style.display = 'none', 500);
         });
     </script>
 </body>
