@@ -18,53 +18,11 @@
         <h2 class="gallery-title">Featured Gallery</h2>
         <div class="gallery">
             <!-- Gallery Items -->
+             {%for i in image%}
             <div class="gallery-item">
-                <img src="https://img.freepik.com/free-photo/solar-panels-roof-solar-cell_335224-1324.jpg?semt=ais_hybrid&w=740" alt="Gallery Image 1">
-                <div class="gallery-item-overlay">
-                    <h3>Natural Serenity</h3>
-                    <p>Peaceful landscapes capturing the essence of nature</p>
-                </div>
+                <img src="{{i.image.url}}" alt="Gallery">
             </div>
-            
-            <div class="gallery-item">
-                <img src="https://www.treehugger.com/thmb/zUpmUk500L7Wvew1ZfV_bKWkMEo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue-solar-panels-1226088001-cee91a7ba920447280aed1d081b44859.jpg" alt="Gallery Image 2">
-                <div class="gallery-item-overlay">
-                    <h3>Urban Reflections</h3>
-                    <p>Modern architecture through an artistic lens</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://media.istockphoto.com/id/1337173750/photo/solar-and-wind-power.jpg?s=612x612&w=0&k=20&c=krNUQVFMq4DDPDvhKhW4SwL06NlmZ7dcHWWGDsxZzKI=" alt="Gallery Image 3">
-                <div class="gallery-item-overlay">
-                    <h3>Vintage Elegance</h3>
-                    <p>Timeless pieces from another era</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://img.freepik.com/premium-photo/renewable-energy-background-with-green-energy-as-wind-turbines-solar-panels_327072-7816.jpg" alt="Gallery Image 4">
-                <div class="gallery-item-overlay">
-                    <h3>Abstract Vision</h3>
-                    <p>Contemporary expressions in vivid color</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://etimg.etb2bimg.com/photo/104906491.cms" alt="Gallery Image 5">
-                <div class="gallery-item-overlay">
-                    <h3>Natural Harmony</h3>
-                    <p>Organic forms in perfect balance</p>
-                </div>
-            </div>
-            
-            <div class="gallery-item">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/052/536/252/small_2x/a-vast-field-of-solar-panels-at-sunset-with-wind-turbines-in-the-background-photo.jpeg" alt="Gallery Image 6">
-                <div class="gallery-item-overlay">
-                    <h3>Coastal Dreams</h3>
-                    <p>Seaside inspirations and oceanic wonder</p>
-                </div>
-            </div>
+            {%endfor%}
         </div>
     </div>
 

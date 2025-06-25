@@ -5,7 +5,7 @@
 
 <!-- Hero Section -->
 <div class="hero-section">
-    <img src="{% static 'image/head.jpg' %}" alt="Solar Energy" class="hero-image">
+    <img src="{{image.image.url}}" alt="Solar Energy" class="hero-image">
     <div class="gradient-overlay"></div>
     <div class="hero-text">
         <h1>Electricity that powers what's next</h1>
@@ -21,7 +21,7 @@
             <div class="card shadow h-100">
                 <div class="row g-0 flex-column flex-md-row">
                     <div class="col-12 col-md-6">
-                        <img src="https://media.istockphoto.com/id/1337173750/photo/solar-and-wind-power.jpg?s=612x612&w=0&k=20&c=krNUQVFMq4DDPDvhKhW4SwL06NlmZ7dcHWWGDsxZzKI=" class="card-img" alt="Commercial Solar">
+                        <img src="{{image.left.url}}" class="card-img" alt="Commercial Solar">
                     </div>
                     <div class="col-12 col-md-6 d-flex align-items-center">
                         <div class="card-body">
@@ -38,13 +38,13 @@
             <div class="card shadow h-100">
                 <div class="row g-0 flex-column flex-md-row">
                     <div class="col-12 col-md-6">
-                        <img src="https://dn5z2jafg7hv0.cloudfront.net/blog/wp-content/uploads/2022/08/14160157/BEST-SOLAR-BATTERY.png" class="card-img" alt="Battery Storage">
+                        <img src="{{image.right.url}}" class="card-img" alt="Battery Storage">
                     </div>
                     <div class="col-12 col-md-6 d-flex align-items-center">
                         <div class="card-body">
                             <h5 class="card-title">Battery Storage</h5>
                             <p class="card-text">Store excess energy and ensure power supply during outages.</p>
-                            <a href="{%url 'service'%}" class="btn btn-info btn-sm mt-2 mx-auto d-block w-75">View More</a>
+                            <a href="{%url 'service'%}" class="btn btn-sm mt-2 mx-auto d-block w-75">View More</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <img src="https://pv-magazine-usa.com/wp-content/uploads/sites/2/2021/03/lg1-scaled.jpeg" alt="About Us" class="img-fluid rounded shadow">
+                <img src="{%static 'image/about.jpeg'%}" alt="About Us" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6">
                 <div class="about-content">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{%url 'about'%}" class="btn btn-outline-primary mt-3">Learn More About Us</a>
+                    <a href="{%url 'about'%}" class="btn mt-3">Learn More About Us</a>
                 </div>
             </div>
         </div>
@@ -146,7 +146,7 @@
                     </div>
                     <div class="testimonial-author d-flex align-items-center mt-3">
                         <div class="author-avatar me-3">
-                            <img src="{% static 'image/head.jpg' %}" alt="Client" class="rounded-circle" width="50" height="50">
+                            <img src="{% static 'image/customer.jpg' %}" alt="Client" class="rounded-circle" width="50" height="50">
                         </div>
                         <div class="author-info">
                             <h6 class="mb-0">John Smith</h6>
@@ -162,10 +162,10 @@
                     </div>
                     <div class="testimonial-author d-flex align-items-center mt-3">
                         <div class="author-avatar me-3">
-                            <img src="{% static 'image/head.jpg' %}" alt="Client" class="rounded-circle" width="50" height="50">
+                            <img src="{% static 'image/cust 2.jpeg' %}" alt="Client" class="rounded-circle" width="50" height="50">
                         </div>
                         <div class="author-info">
-                            <h6 class="mb-0">Sarah Johnson</h6>
+                            <h6 class="mb-0">Mary john</h6>
                             <small>Business Owner</small>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                     </div>
                     <div class="testimonial-author d-flex align-items-center mt-3">
                         <div class="author-avatar me-3">
-                            <img src="{% static 'image/head.jpg' %}" alt="Client" class="rounded-circle" width="50" height="50">
+                            <img src="{% static 'image/cust2.jpg' %}" alt="Client" class="rounded-circle" width="50" height="50">
                         </div>
                         <div class="author-info">
                             <h6 class="mb-0">Michael Davis</h6>
@@ -198,7 +198,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-6 mb-4">
                 <div class="project-card">
-                    <img src="https://media.istockphoto.com/id/985363900/photo/solar-panels-on-roof-of-home.jpg?s=170667a&w=is&k=20&c=2lUX9WsY9ZHDv6kwWdca-EfsQxUy9s3gYhkTjy8rNbk=" alt="Project 1" class="img-fluid">
+                    <img src="{%static 'image/11.jpg'%}" alt="Project 1" class="img-fluid">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h5>Residential Installation</h5>
@@ -209,7 +209,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-6 mb-4">
                 <div class="project-card">
-                    <img src="https://sistinesolar.com/wp-content/uploads/2023/08/Commercial-solar-panels-cost3.jpg" alt="Project 2" class="img-fluid">
+                    <img src="{%static 'image/1.jpg'%}" alt="Project 2" class="img-fluid">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h5>Commercial Project</h5>
@@ -220,7 +220,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-6 mb-4">
                 <div class="project-card">
-                    <img src="https://cdn.prod.website-files.com/67ee9098b2bc684f95cd8c68/67ee9098b2bc684f95cd8dcb_60ee9ed2cb46a5647fe60a13_solar-panels-drone-l.jpg" alt="Project 3" class="img-fluid">
+                    <img src="{%static 'image/2.jpg'%}" alt="Project 3" class="img-fluid">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h5>School Installation</h5>
@@ -231,7 +231,7 @@
             </div>
             <div class="col-lg-3 col-md-6 col-6 mb-4">
                 <div class="project-card">
-                    <img src="https://www.mahindrasolarize.com/assets/images/products/commercial-industrial-solar-rooftop/commercial-industrial.jpg" alt="Project 4" class="img-fluid">
+                    <img src="{%static 'image/3.jpg'%}" alt="Project 4" class="img-fluid">
                     <div class="project-overlay">
                         <div class="project-info">
                             <h5>Industrial Setup</h5>
@@ -242,7 +242,7 @@
             </div>
         </div>
         <div class="text-center mt-4">
-            <a href="{%url 'gallery'%}" class="btn btn-primary">View All Projects</a>
+            <a href="{%url 'gallery'%}" class="btn">View All Projects</a>
         </div>
     </div>
 </section>

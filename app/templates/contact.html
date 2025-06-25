@@ -12,8 +12,54 @@
     </div>
 </div>
 
+<div class="container d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 col-lg-6">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+
+
 <!-- Contact Section -->
 <div class="contact-container">
+
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+        <h2>Send a Message</h2>
+        <form method="post">
+            {%csrf_token%}
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                {{form.name}}
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Your Phone</label>
+                {{form.phone}}
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                {{form.subject}}
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                {{form.message}}
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+    </div>
+
     <!-- Contact Information -->
     <div class="contact-info">
         <h2>Get in Touch</h2>
@@ -48,73 +94,33 @@
             </div>
         </div>
 
-        <div class="info-item">
-            <div class="info-icon">
-                <i class="fas fa-clock"></i>
-            </div>
-            <div class="info-text">
-                <h3>Working Hours</h3>
-                <p>Monday - Friday: 10AM - 6PM</p>
-                <p>Saturday: 11AM - 5PM</p>
-                <p>Sunday: Closed</p>
-            </div>
-        </div>
+
 
         <div class="social-links">
-            <a href="#" class="social-icon">
+            <a href="https://www.facebook.com/share/1gsYc9T48L/?mibextid=wwXIfr" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon">
+
+            <a href="https://www.instagram.com/multimixdistributors?utm_source=ig_web_button_share_sheet&igsh=MW85cnlyYWVpNjl5cg=="
+                class="social-icon">
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
     </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form">
-        <h2>Send a Message</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control" required>
-            </div>
 
-            <div class="form-group">
-                <label for="email">Your Email</label>
-                <input type="email" id="email" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Your Message</label>
-                <textarea id="message" class="form-control" required></textarea>
-            </div>
-
-            <button type="submit" class="btn-submit">Send Message</button>
-        </form>
-    </div>
 </div>
+
 
 
 <!-- Map Section -->
 <div class="container-fluid">
-    
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15767.496542101751!2d76.6057335527954!3d8.891292493907141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd9c81997a21%3A0x9a5017df65b6ef22!2sMultimix%20security%20system%20providers!5e0!3m2!1sen!2sin!4v1747649835082!5m2!1sen!2sin"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-    
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3746.768675500968!2d76.64230838084072!3d8.897625600000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e3c89bd04d6b%3A0x198e81e6b770d422!2sMultimix%20Distributors!5e1!3m2!1sen!2sin!4v1750829335914!5m2!1sen!2sin"
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
 </div>
 
 
